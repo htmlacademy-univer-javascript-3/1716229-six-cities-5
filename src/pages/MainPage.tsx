@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Card from "../components/Card";
 import Header from "../components/Header";
 
@@ -8,6 +9,11 @@ type TMainPageProps = {
 export default function MainPage({ offersCount }: TMainPageProps) {
     return (
         <div className="page page--gray page--main">
+            <Helmet>
+                <title>
+                    6 cities
+                </title>
+            </Helmet>
             <Header />
             <main className="page__main page__main--index">
                 <h1 className="visually-hidden">Cities</h1>
