@@ -1,25 +1,23 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import {Link} from "react-router-dom";
+import {Helmet} from "react-helmet-async";
 
-import { AppRoute } from "../const";
+import {AppRoute} from "../const";
 
-import styles from './NotFoundPage.module.css'
+import styles from "./NotFoundPage.module.css";
 
 export default function NotFoundPage() {
-    return (
-        <div className={`page ${styles.notFoundPage}`}>
-            <Helmet>
-                <title>
-                    6 cities - Not Found
-                </title>
-            </Helmet>
-            <h1 className={styles.title}>404 Not Found</h1>
-            <p className={styles.text}>
-                Return to the{' '}
-                <Link to={AppRoute.Root} className={styles.link}>
-                    main page
-                </Link>
-            </p>
-        </div>
-    )
+	return (
+		<div className={`page ${styles.notFoundPage}`}>
+			<Helmet>
+				<title>6 cities - Not Found</title>
+			</Helmet>
+			<h1 className={styles.title}>404 Not Found</h1>
+			<p className={styles.text}>
+				Return to the{" "}
+				<Link to={AppRoute.Root} className={styles.link}>
+					main page
+				</Link>
+			</p>
+		</div>
+	);
 }
